@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #2b2b2b;
+  background-color: #f7f9fc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  background-color: #ffffff;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  max-height: 70px;
+  width: auto;
+}
+
+/* Horizontal Navigation Menu (Flexbox) */
+.site-nav {
+  background-color: #1e293b; /* Deep slate background */
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.site-nav a {
+  display: block;
+  padding: 1rem 0;
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Interactivity: Hover & Active States */
+.site-nav a:hover,
+.site-nav a.active {
+  color: #38bdf8; /* Sky blue accent */
+  border-bottom: 3px solid #38bdf8;
+}
+
+/* ==========================================================================
+   Main Content Area & Banner
+   ========================================================================== */
+.site-main {
+  padding: 2.5rem 20px;
+}
+
+/* Promotional Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  padding: 4.5rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hero-banner h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+
+/* CTA Interactivity & Transitions */
+.cta-button {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.3);
+}
+
+/* 3-Column Content Layout (CSS Grid) */
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 2rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  color: #0f172a;
+}
+
+.feature-card p {
+  padding: 0 1.25rem 1.5rem 1.25rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Footer Layout (2-Column Flexbox)
+   ========================================================================== */
+.site-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 2.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  max-height: 45px;
+  width: auto;
+}
+
+.footer-right p {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .three-column-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
